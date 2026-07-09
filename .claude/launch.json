@@ -4,7 +4,7 @@
     {
       "name": "solpower",
       "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "4321"],
+      "runtimeArgs": ["-c", "import os; os.chdir('/tmp/solpower_preview'); import http.server, socketserver; H=lambda *a, **k: http.server.SimpleHTTPRequestHandler(*a, directory='/tmp/solpower_preview', **k); socketserver.TCPServer(('127.0.0.1', 4321), H).serve_forever()"],
       "port": 4321
     }
   ]

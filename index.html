@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SolPower — Calcola il tuo preventivo fotovoltaico gratuito</title>
-  <meta name="description" content="Scopri quanto puoi risparmiare in bolletta con un impianto fotovoltaico SolPower. Preventivo gratuito in 24 ore. Veneto, Friuli Venezia Giulia ed Emilia Romagna." />
+  <title>SolPower — Fotovoltaico + accumulo + climatizzatore a 11.599€ | Offerta a tempo</title>
+  <meta name="description" content="Offerta promo SolPower: impianto fotovoltaico 6,1 kW + accumulo 10 kWh + climatizzatore 12.000 BTU, chiavi in mano, a 11.599€ + IVA. Solo per un mese. Nelle province di verona, vicenza, padova, treviso, pordenone, udine e gorizia." />
 
   <!-- Google Tag Manager: inserire snippet GTM-K6CV3KQT qui -->
 
@@ -41,12 +41,9 @@
     }
 
     h1, h2, h3, .display { font-family: 'Sora', sans-serif; font-weight: 800; line-height: 1.15; }
-
     img { max-width: 100%; display: block; }
-
     a { color: inherit; }
 
-    /* Focus visibile per accessibilità */
     a:focus-visible, button:focus-visible, input:focus-visible,
     select:focus-visible, [tabindex]:focus-visible {
       outline: 3px solid var(--giallo);
@@ -55,495 +52,332 @@
     }
 
     .container { width: 100%; max-width: 1140px; margin: 0 auto; padding: 0 20px; }
-
     .section { padding: 64px 0; }
-
     .text-center { text-align: center; }
 
     /* ============================== BOTTONI ============================== */
     .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      font-family: 'Sora', sans-serif;
-      font-weight: 700;
-      font-size: 1.05rem;
-      border: none;
-      border-radius: 12px;
-      padding: 16px 28px;
-      cursor: pointer;
-      text-decoration: none;
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      font-family: 'Sora', sans-serif; font-weight: 700; font-size: 1.05rem;
+      border: none; border-radius: 12px; padding: 16px 28px;
+      cursor: pointer; text-decoration: none;
       transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
       line-height: 1.2;
     }
-    .btn-primary {
-      background: var(--giallo);
-      color: var(--blu);
-      box-shadow: 0 8px 24px rgba(245, 168, 0, 0.35);
-    }
+    .btn-primary { background: var(--giallo); color: var(--blu); box-shadow: 0 8px 24px rgba(245, 168, 0, 0.35); }
     .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(245, 168, 0, 0.45); }
-    .btn-outline {
-      background: transparent;
-      color: var(--bianco);
-      border: 2px solid var(--bianco);
-    }
+    .btn-outline { background: transparent; color: var(--bianco); border: 2px solid var(--bianco); }
     .btn-outline:hover { background: var(--bianco); color: var(--blu); }
     .btn-lg { font-size: 1.2rem; padding: 18px 36px; }
     .btn-block { width: 100%; }
 
+    /* ============================== PROMO BAR ============================== */
+    .promo-bar {
+      background: var(--giallo);
+      color: var(--blu);
+      text-align: center;
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 9px 16px;
+      line-height: 1.4;
+    }
+    .promo-bar strong { font-weight: 700; }
+    .promo-bar a { color: var(--blu); font-weight: 700; text-decoration: underline; white-space: nowrap; }
+    .promo-bar .promo-sep { opacity: 0.5; margin: 0 8px; }
+    @media (max-width: 600px) { .promo-bar .promo-hide-mobile { display: none; } }
+
     /* ============================== HEADER ============================== */
     header.site-header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      position: sticky; top: 0; z-index: 100;
       background: rgba(26, 26, 46, 0.96);
       backdrop-filter: blur(8px);
       border-bottom: 1px solid rgba(255,255,255,0.08);
     }
     .header-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 12px 20px;
-      max-width: 1140px;
-      margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      padding: 12px 20px; max-width: 1140px; margin: 0 auto;
     }
     .logo { display: flex; align-items: center; gap: 8px; }
     /* logo nero su sfondo trasparente → reso bianco per l'header scuro */
     .logo img { height: 22px; width: auto; filter: brightness(0) invert(1); }
     @media (min-width: 768px) { .logo img { height: 26px; } }
-    .logo-fallback {
-      font-family: 'Sora', sans-serif;
-      font-weight: 800;
-      font-size: 1.4rem;
-      color: var(--bianco);
-      letter-spacing: -0.5px;
-    }
+    .logo-fallback { font-family: 'Sora', sans-serif; font-weight: 800; font-size: 1.4rem; color: var(--bianco); letter-spacing: -0.5px; }
     .logo-fallback span { color: var(--giallo); }
     .header-actions { display: flex; align-items: center; gap: 14px; }
-    .header-phone {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      color: var(--bianco);
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 0.95rem;
-      white-space: nowrap;
-    }
+    .header-phone { display: inline-flex; align-items: center; gap: 7px; color: var(--bianco); text-decoration: none; font-weight: 500; font-size: 0.95rem; white-space: nowrap; }
     .header-phone svg { fill: var(--verde); width: 18px; height: 18px; flex: 0 0 auto; }
     .header-phone strong { color: var(--giallo); }
     .header-cta { font-size: 0.95rem; padding: 11px 20px; }
     .header-phone-label { display: inline; }
 
     /* ============================== HERO ============================== */
-    .hero {
-      background: var(--blu);
-      color: var(--bianco);
-      padding: 56px 0 72px;
-      position: relative;
-      overflow: hidden;
-    }
+    .hero { background: var(--blu); color: var(--bianco); padding: 48px 0 64px; position: relative; overflow: hidden; }
     .hero::after {
-      content: "";
-      position: absolute;
-      top: -120px; right: -120px;
+      content: ""; position: absolute; top: -120px; right: -120px;
       width: 380px; height: 380px;
       background: radial-gradient(circle, rgba(245,168,0,0.18), transparent 70%);
       pointer-events: none;
     }
-    .hero-inner { position: relative; z-index: 1; max-width: 760px; }
-    .hero h1 { font-size: clamp(2rem, 6vw, 3.4rem); margin-bottom: 18px; }
-    .hero .sub {
-      color: var(--giallo);
-      font-weight: 500;
-      font-size: clamp(0.95rem, 2.5vw, 1.15rem);
-      margin-bottom: 36px;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .hero .sub svg { width: 18px; height: 18px; fill: var(--giallo); flex: 0 0 auto; }
+    .hero-inner { position: relative; z-index: 1; }
+    .hero-grid { display: grid; grid-template-columns: 1fr; gap: 32px; align-items: center; }
 
-    .counter-box {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 18px;
-      padding: 28px 24px;
-      margin-bottom: 32px;
-      display: inline-block;
-    }
-    .counter-box .label { font-size: 1rem; color: var(--grigio-chiaro); margin-bottom: 6px; }
-    .counter-value {
-      font-family: 'Sora', sans-serif;
-      font-weight: 800;
+    .promo-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(245,168,0,0.15);
+      border: 1px solid rgba(245,168,0,0.4);
       color: var(--giallo);
-      font-size: clamp(3rem, 11vw, 5rem);
-      line-height: 1;
-      letter-spacing: -2px;
-      display: flex;
-      align-items: baseline;
-      gap: 4px;
+      font-weight: 700; font-size: 0.85rem; letter-spacing: 0.5px; text-transform: uppercase;
+      padding: 7px 14px; border-radius: 999px; margin-bottom: 20px;
     }
-    .counter-value .suffix { font-size: clamp(1.2rem, 4vw, 1.8rem); color: var(--grigio-chiaro); font-weight: 700; }
+    .hero h1 { font-size: clamp(1.9rem, 5.5vw, 3rem); margin-bottom: 16px; }
+    .hero .pkg {
+      display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px;
+    }
+    .pkg-chip {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 10px; padding: 8px 12px; font-size: 0.92rem; font-weight: 500;
+    }
+    .pkg-chip svg { width: 18px; height: 18px; fill: var(--giallo); flex: 0 0 auto; }
+    .hero .region {
+      color: var(--grigio-chiaro); font-size: 0.9rem; margin-bottom: 6px;
+      display: inline-flex; align-items: center; gap: 7px;
+    }
+    .hero .region svg { width: 16px; height: 16px; fill: var(--giallo); flex: 0 0 auto; }
+    .hero-saving { color: var(--grigio-chiaro); font-size: 0.95rem; margin-bottom: 26px; }
+    .hero-saving strong { color: var(--giallo); font-family: 'Sora', sans-serif; font-size: 1.15rem; }
 
-    .hero-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px 26px;
-      margin-bottom: 36px;
-    }
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      font-size: 0.98rem;
-      font-weight: 500;
-    }
-    .hero-badge svg { width: 22px; height: 22px; flex: 0 0 auto; }
+    .hero-badges { display: flex; flex-wrap: wrap; gap: 12px 22px; margin: 24px 0 8px; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; font-size: 0.92rem; font-weight: 500; }
+    .hero-badge svg { width: 20px; height: 20px; flex: 0 0 auto; }
     .check-circle { fill: var(--verde); }
-
-    .hero-social {
-      margin-top: 18px;
-      color: var(--grigio-chiaro);
-      font-size: 0.9rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
+    .hero-social { margin-top: 20px; color: var(--grigio-chiaro); font-size: 0.9rem; display: inline-flex; align-items: center; gap: 8px; }
     .hero-social svg { width: 16px; height: 16px; fill: var(--giallo); }
+
+    /* OFFER CARD */
+    .offer-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 20px;
+      padding: 26px 24px;
+      text-align: center;
+    }
+    .offer-card .oc-label { font-size: 0.9rem; color: var(--grigio-chiaro); margin-bottom: 4px; }
+    .offer-price { display: flex; align-items: baseline; justify-content: center; gap: 6px; }
+    .offer-price .amount {
+      font-family: 'Sora', sans-serif; font-weight: 800;
+      font-size: clamp(3rem, 12vw, 4.6rem); color: var(--giallo); line-height: 1; letter-spacing: -2px;
+    }
+    .offer-price .iva { font-size: 1.05rem; color: var(--grigio-chiaro); font-weight: 700; }
+    .offer-eff { margin-top: 10px; font-size: 0.95rem; color: var(--bianco); }
+    .offer-eff strong { color: var(--verde); font-family: 'Sora', sans-serif; }
+    .offer-card .oc-cta { margin-top: 20px; }
+    .offer-turnkey {
+      display: inline-flex; align-items: center; gap: 6px;
+      margin-top: 14px; font-size: 0.82rem; color: var(--grigio-chiaro);
+    }
+    .offer-turnkey svg { width: 14px; height: 14px; fill: var(--verde); }
+    /* costo reale dopo detrazione — evidenziato */
+    .offer-real {
+      margin-top: 16px;
+      background: rgba(46,204,113,0.12);
+      border: 1px solid rgba(46,204,113,0.4);
+      border-radius: 14px;
+      padding: 14px 16px;
+      display: flex; flex-direction: column; align-items: center; gap: 3px;
+    }
+    .or-label { font-size: 0.78rem; color: var(--grigio-chiaro); text-transform: uppercase; letter-spacing: 0.5px; }
+    .or-amount { font-family: 'Sora', sans-serif; font-weight: 800; font-size: clamp(2.2rem, 9vw, 2.9rem); color: var(--verde); line-height: 1; }
+    .or-sub { font-size: 0.78rem; color: var(--grigio-chiaro); }
+    /* include-banner: evidenzia il costo reale */
+    .ip-real { margin-top: 10px; }
+    .ipr-label { display: block; font-size: 0.78rem; color: var(--grigio-chiaro); }
+    .ipr-amount { font-family: 'Sora', sans-serif; font-weight: 800; font-size: 1.7rem; color: var(--verde); line-height: 1.1; }
+
+    /* COUNTDOWN */
+    .countdown-wrap { margin-top: 20px; }
+    .countdown-label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--grigio-chiaro); margin-bottom: 8px; }
+    .countdown { display: flex; justify-content: center; gap: 10px; }
+    .cd-unit {
+      background: var(--blu-scuro); border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px; padding: 8px 6px; min-width: 58px;
+    }
+    .cd-num { display: block; font-family: 'Sora', sans-serif; font-weight: 800; font-size: 1.5rem; color: var(--bianco); line-height: 1; }
+    .cd-lbl { display: block; font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--grigio-chiaro); margin-top: 4px; }
 
     /* ============================== TRUST BAR ============================== */
     .trust-bar { background: var(--bianco); padding: 44px 0; border-bottom: 1px solid var(--ghiaccio); }
-    .trust-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 28px 16px;
-      text-align: center;
-    }
+    .trust-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px 16px; text-align: center; }
     .trust-item svg { width: 38px; height: 38px; margin: 0 auto 10px; display: block; }
-    .trust-num {
-      font-family: 'Sora', sans-serif;
-      font-weight: 800;
-      font-size: 1.9rem;
-      color: var(--blu);
-      line-height: 1;
-    }
+    .trust-num { font-family: 'Sora', sans-serif; font-weight: 800; font-size: 1.9rem; color: var(--blu); line-height: 1; }
     .trust-label { font-size: 0.88rem; color: var(--grigio-testo); margin-top: 6px; }
 
     /* ============================== SECTION TITLES ============================== */
-    .section-title {
-      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
-      text-align: center;
-      margin-bottom: 12px;
+    .section-title { font-size: clamp(1.6rem, 4.5vw, 2.4rem); text-align: center; margin-bottom: 12px; }
+    .section-subtitle { text-align: center; color: var(--grigio-testo); max-width: 640px; margin: 0 auto 44px; font-size: 1.05rem; }
+
+    /* ============================== COSA INCLUDE ============================== */
+    .includes { background: var(--ghiaccio); }
+    .include-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+    .include-card {
+      background: var(--bianco); border-radius: 16px; padding: 28px 24px;
+      box-shadow: 0 4px 18px rgba(26,26,46,0.06); position: relative;
     }
-    .section-subtitle {
-      text-align: center;
-      color: var(--grigio-testo);
-      max-width: 640px;
-      margin: 0 auto 44px;
-      font-size: 1.05rem;
+    .include-tag {
+      position: absolute; top: 18px; right: 18px;
+      background: rgba(46,204,113,0.14); color: #1e8a4d; font-weight: 700; font-size: 0.72rem;
+      padding: 4px 10px; border-radius: 999px;
     }
+    .include-icon {
+      width: 56px; height: 56px; background: rgba(245,168,0,0.14); border-radius: 14px;
+      display: flex; align-items: center; justify-content: center; margin-bottom: 16px;
+    }
+    .include-icon svg { width: 32px; height: 32px; fill: var(--giallo); }
+    .include-card h3 { font-size: 1.25rem; margin-bottom: 4px; }
+    .include-card .spec { color: var(--giallo); font-weight: 700; font-family: 'Sora', sans-serif; font-size: 0.9rem; margin-bottom: 8px; }
+    .include-card p { color: var(--grigio-testo); font-size: 0.96rem; }
+
+    .include-banner {
+      margin-top: 22px; background: var(--blu); color: var(--bianco);
+      border-radius: 16px; padding: 26px 24px;
+      display: flex; flex-direction: column; gap: 18px; align-items: flex-start;
+    }
+    .include-banner .ib-text { display: flex; gap: 14px; align-items: flex-start; }
+    .include-banner .ib-text svg { width: 30px; height: 30px; fill: var(--giallo); flex: 0 0 auto; margin-top: 2px; }
+    .include-banner h3 { font-size: 1.2rem; margin-bottom: 4px; }
+    .include-banner p { color: var(--grigio-chiaro); font-size: 0.95rem; }
+    .include-price {
+      display: flex; flex-direction: column; gap: 4px; width: 100%;
+      border-top: 1px solid rgba(255,255,255,0.12); padding-top: 18px;
+    }
+    .include-price .ip-amount { font-family: 'Sora', sans-serif; font-weight: 800; font-size: 2rem; color: var(--giallo); }
+    .include-price .ip-amount span { font-size: 1rem; color: var(--grigio-chiaro); font-weight: 700; }
+    .include-price .ip-eff { font-size: 0.9rem; color: var(--grigio-chiaro); }
+    .include-price .ip-eff strong { color: var(--verde); }
 
     /* ============================== BENEFICI ============================== */
-    .benefits { background: var(--ghiaccio); }
-    .benefits-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 20px;
-    }
+    .benefits { background: var(--bianco); }
+    .benefits-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
     .benefit-card {
-      background: var(--bianco);
-      border-radius: 16px;
-      padding: 28px 24px;
-      box-shadow: 0 4px 18px rgba(26,26,46,0.06);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      background: var(--bianco); border: 1px solid var(--ghiaccio); border-radius: 16px; padding: 28px 24px;
+      box-shadow: 0 4px 18px rgba(26,26,46,0.05); transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
     .benefit-card:hover { transform: translateY(-4px); box-shadow: var(--ombra); }
     .benefit-icon {
-      width: 52px; height: 52px;
-      background: rgba(245,168,0,0.14);
-      border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      margin-bottom: 16px;
+      width: 52px; height: 52px; background: rgba(245,168,0,0.14); border-radius: 12px;
+      display: flex; align-items: center; justify-content: center; margin-bottom: 16px;
     }
     .benefit-icon svg { width: 28px; height: 28px; fill: var(--giallo); }
     .benefit-card h3 { font-size: 1.2rem; margin-bottom: 8px; }
     .benefit-card p { color: var(--grigio-testo); font-size: 0.96rem; }
 
     /* ============================== FORM ============================== */
-    .form-section { background: var(--bianco); }
+    .form-section { background: var(--ghiaccio); }
     .form-card {
-      max-width: 680px;
-      margin: 0 auto;
-      background: var(--bianco);
-      border-radius: 22px;
-      box-shadow: var(--ombra);
-      border: 1px solid var(--ghiaccio);
-      overflow: hidden;
+      max-width: 680px; margin: 0 auto; background: var(--bianco);
+      border-radius: 22px; box-shadow: var(--ombra); border: 1px solid #e8ebee; overflow: hidden;
     }
     .form-head { padding: 32px 32px 0; text-align: center; }
     .form-head h2 { font-size: clamp(1.5rem, 4vw, 2rem); margin-bottom: 8px; }
     .form-head p { color: var(--grigio-testo); font-size: 0.98rem; }
     .form-head .badge-free {
       display: inline-flex; align-items: center; gap: 6px;
-      background: rgba(46,204,113,0.12);
-      color: #1e8a4d;
-      font-weight: 600;
-      font-size: 0.85rem;
-      padding: 5px 12px;
-      border-radius: 999px;
-      margin-bottom: 14px;
+      background: rgba(46,204,113,0.12); color: #1e8a4d; font-weight: 600; font-size: 0.85rem;
+      padding: 5px 12px; border-radius: 999px; margin-bottom: 14px;
     }
     .form-head .badge-free svg { width: 14px; height: 14px; fill: var(--verde); }
 
     .progress-wrap { padding: 24px 32px 0; }
-    .progress-track {
-      height: 8px;
-      background: var(--ghiaccio);
-      border-radius: 999px;
-      overflow: hidden;
-    }
-    .progress-fill {
-      height: 100%;
-      width: 33.33%;
-      background: var(--giallo);
-      border-radius: 999px;
-      transition: width 0.4s ease;
-    }
-    .progress-text {
-      font-size: 0.82rem;
-      color: var(--grigio-testo);
-      margin-top: 8px;
-      font-weight: 500;
-    }
+    .progress-track { height: 8px; background: var(--ghiaccio); border-radius: 999px; overflow: hidden; }
+    .progress-fill { height: 100%; width: 33.33%; background: var(--giallo); border-radius: 999px; transition: width 0.4s ease; }
+    .progress-text { font-size: 0.82rem; color: var(--grigio-testo); margin-top: 8px; font-weight: 500; }
 
     .form-body { padding: 24px 32px 36px; }
-
     .step { display: none; }
     .step.active { display: block; animation: fadeIn 0.35s ease; }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
-
     .step-title { font-size: 1.25rem; margin-bottom: 4px; }
     .step-hint { color: var(--grigio-testo); font-size: 0.9rem; margin-bottom: 20px; }
 
     .field-group { margin-bottom: 22px; }
-    .field-label {
-      display: block;
-      font-weight: 600;
-      font-size: 0.95rem;
-      margin-bottom: 10px;
-    }
-
+    .field-label { display: block; font-weight: 600; font-size: 0.95rem; margin-bottom: 10px; }
     .option-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
     .option-grid.cols-1 { grid-template-columns: 1fr; }
     .option-grid.cols-3 { grid-template-columns: 1fr; }
-
     .option-btn {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.98rem;
-      font-weight: 500;
-      background: var(--bianco);
-      border: 2px solid #e3e6ea;
-      border-radius: 12px;
-      padding: 15px 16px;
-      cursor: pointer;
-      text-align: center;
-      transition: all 0.15s ease;
-      color: var(--blu);
+      font-family: 'Inter', sans-serif; font-size: 0.98rem; font-weight: 500;
+      background: var(--bianco); border: 2px solid #e3e6ea; border-radius: 12px;
+      padding: 15px 16px; cursor: pointer; text-align: center; transition: all 0.15s ease; color: var(--blu);
     }
     .option-btn:hover { border-color: var(--giallo); }
-    .option-btn.selected {
-      border-color: var(--giallo);
-      background: rgba(245,168,0,0.1);
-      font-weight: 600;
-    }
+    .option-btn.selected { border-color: var(--giallo); background: rgba(245,168,0,0.1); font-weight: 600; }
 
     .text-input, .select-input {
-      width: 100%;
-      font-family: 'Inter', sans-serif;
-      font-size: 1rem;
-      padding: 14px 15px;
-      border: 2px solid #e3e6ea;
-      border-radius: 12px;
-      background: var(--bianco);
-      color: var(--blu);
-      transition: border-color 0.15s ease;
+      width: 100%; font-family: 'Inter', sans-serif; font-size: 1rem; padding: 14px 15px;
+      border: 2px solid #e3e6ea; border-radius: 12px; background: var(--bianco); color: var(--blu); transition: border-color 0.15s ease;
     }
     .text-input:focus, .select-input:focus { border-color: var(--giallo); outline: none; }
     .text-input.error, .select-input.error, .option-grid.error .option-btn { border-color: var(--rosso); }
-    .option-grid.error { outline: 2px solid transparent; }
 
-    .field-error {
-      display: none;
-      color: var(--rosso);
-      font-size: 0.84rem;
-      margin-top: 6px;
-      font-weight: 500;
-    }
+    .field-error { display: none; color: var(--rosso); font-size: 0.84rem; margin-top: 6px; font-weight: 500; }
     .field-error.show { display: block; }
 
-    .checkbox-field {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      font-size: 0.9rem;
-      color: var(--grigio-testo);
-      margin-bottom: 20px;
-    }
+    .checkbox-field { display: flex; align-items: flex-start; gap: 10px; font-size: 0.9rem; color: var(--grigio-testo); margin-bottom: 20px; }
     .checkbox-field input { margin-top: 3px; width: 18px; height: 18px; flex: 0 0 auto; accent-color: var(--giallo); }
     .checkbox-field a { color: var(--blu); font-weight: 600; text-decoration: underline; }
 
     .step-nav { display: flex; align-items: center; gap: 14px; margin-top: 8px; }
     .step-nav .btn { flex: 1; }
-    .btn-back {
-      background: none;
-      border: none;
-      color: var(--grigio-testo);
-      font-family: 'Inter', sans-serif;
-      font-weight: 500;
-      font-size: 0.95rem;
-      cursor: pointer;
-      padding: 10px;
-      flex: 0 0 auto;
-      white-space: nowrap;
-    }
+    .btn-back { background: none; border: none; color: var(--grigio-testo); font-family: 'Inter', sans-serif; font-weight: 500; font-size: 0.95rem; cursor: pointer; padding: 10px; flex: 0 0 auto; white-space: nowrap; }
     .btn-back:hover { color: var(--blu); }
 
-    .form-secure-note {
-      display: flex; align-items: center; gap: 8px;
-      justify-content: center;
-      color: var(--grigio-testo);
-      font-size: 0.85rem;
-      margin-top: 16px;
-    }
+    .form-secure-note { display: flex; align-items: center; gap: 8px; justify-content: center; color: var(--grigio-testo); font-size: 0.85rem; margin-top: 16px; }
     .form-secure-note svg { width: 15px; height: 15px; fill: var(--grigio-testo); }
 
-    .form-alert {
-      display: none;
-      background: rgba(231,76,60,0.1);
-      border: 1px solid rgba(231,76,60,0.3);
-      color: #c0392b;
-      border-radius: 12px;
-      padding: 14px 16px;
-      font-size: 0.92rem;
-      margin-bottom: 18px;
-      font-weight: 500;
-    }
+    .form-alert { display: none; background: rgba(231,76,60,0.1); border: 1px solid rgba(231,76,60,0.3); color: #c0392b; border-radius: 12px; padding: 14px 16px; font-size: 0.92rem; margin-bottom: 18px; font-weight: 500; }
     .form-alert.show { display: block; }
 
-    /* THANK YOU */
     .thankyou { display: none; text-align: center; padding: 20px 0; }
     .thankyou.active { display: block; animation: fadeIn 0.4s ease; }
-    .thankyou .ty-icon {
-      width: 72px; height: 72px;
-      background: rgba(46,204,113,0.15);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      margin: 0 auto 18px;
-    }
+    .thankyou .ty-icon { width: 72px; height: 72px; background: rgba(46,204,113,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 18px; }
     .thankyou .ty-icon svg { width: 38px; height: 38px; fill: var(--verde); }
     .thankyou h2 { color: #1e8a4d; font-size: 1.6rem; margin-bottom: 12px; }
-    .thankyou p { color: var(--grigio-testo); margin-bottom: 22px; max-width: 420px; margin-left: auto; margin-right: auto; }
+    .thankyou p { color: var(--grigio-testo); margin-bottom: 22px; max-width: 440px; margin-left: auto; margin-right: auto; }
 
     /* ============================== COME FUNZIONA ============================== */
     .how { background: var(--blu); color: var(--bianco); }
     .how .section-title { color: var(--bianco); }
-    .how-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 28px;
-    }
+    .how-grid { display: grid; grid-template-columns: 1fr; gap: 28px; }
     .how-step { display: flex; gap: 18px; align-items: flex-start; }
-    .how-num {
-      flex: 0 0 auto;
-      width: 46px; height: 46px;
-      background: var(--giallo);
-      color: var(--blu);
-      font-family: 'Sora', sans-serif;
-      font-weight: 800;
-      font-size: 1.3rem;
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-    }
+    .how-num { flex: 0 0 auto; width: 46px; height: 46px; background: var(--giallo); color: var(--blu); font-family: 'Sora', sans-serif; font-weight: 800; font-size: 1.3rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
     .how-step h3 { font-size: 1.15rem; margin-bottom: 5px; }
     .how-step p { color: var(--grigio-chiaro); font-size: 0.96rem; }
 
     /* ============================== DETRAZIONE ============================== */
     .detrazione { background: var(--giallo); color: var(--blu); }
     .detrazione .section-title { color: var(--blu); max-width: 760px; margin-left: auto; margin-right: auto; }
-    .detrazione-box {
-      background: var(--bianco);
-      border-radius: 18px;
-      padding: 32px 28px;
-      max-width: 480px;
-      margin: 28px auto 0;
-      box-shadow: 0 14px 40px rgba(26,26,46,0.18);
-    }
-    .detr-row {
-      display: flex;
-      justify-content: space-between;
-      padding: 9px 0;
-      font-size: 1.05rem;
-    }
+    .detrazione-box { background: var(--bianco); border-radius: 18px; padding: 32px 28px; max-width: 480px; margin: 28px auto 0; box-shadow: 0 14px 40px rgba(26,26,46,0.18); }
+    .detr-row { display: flex; justify-content: space-between; padding: 9px 0; font-size: 1.02rem; gap: 12px; }
     .detr-row .lbl { color: var(--grigio-testo); }
-    .detr-row .val { font-weight: 600; font-family: 'Sora', sans-serif; }
+    .detr-row .val { font-weight: 600; font-family: 'Sora', sans-serif; white-space: nowrap; }
     .detr-row.minus .val { color: var(--verde); }
     .detr-divider { border: none; border-top: 2px dashed #e3e6ea; margin: 6px 0; }
-    .detr-row.total { font-size: 1.25rem; padding-top: 12px; }
+    .detr-row.total { font-size: 1.2rem; padding-top: 12px; }
     .detr-row.total .val { color: var(--blu); }
-    .detr-saving {
-      background: rgba(46,204,113,0.12);
-      border-radius: 10px;
-      padding: 12px 14px;
-      margin-top: 14px;
-      text-align: center;
-      font-weight: 600;
-      color: #1e8a4d;
-    }
-    .detr-result {
-      text-align: center;
-      margin-top: 16px;
-      font-family: 'Sora', sans-serif;
-      font-weight: 700;
-      font-size: 1.1rem;
-    }
+    .detr-saving { background: rgba(46,204,113,0.12); border-radius: 10px; padding: 12px 14px; margin-top: 14px; text-align: center; font-weight: 600; color: #1e8a4d; }
+    .detr-result { text-align: center; margin-top: 16px; font-family: 'Sora', sans-serif; font-weight: 700; font-size: 1.1rem; }
     .detr-note { text-align: center; font-size: 0.8rem; color: var(--grigio-testo); margin-top: 10px; }
     .detrazione .cta-wrap { text-align: center; margin-top: 32px; }
 
     /* ============================== RECENSIONI ============================== */
     .reviews { background: var(--bianco); }
-    .reviews-track {
-      display: flex;
-      gap: 18px;
-      overflow-x: auto;
-      padding: 8px 4px 24px;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-    }
+    .reviews-track { display: flex; gap: 18px; overflow-x: auto; padding: 8px 4px 24px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
     .reviews-track::-webkit-scrollbar { height: 8px; }
     .reviews-track::-webkit-scrollbar-thumb { background: #d7dbe0; border-radius: 999px; }
-    .review-card {
-      flex: 0 0 300px;
-      scroll-snap-align: start;
-      background: var(--ghiaccio);
-      border-radius: 16px;
-      padding: 24px;
-    }
+    .review-card { flex: 0 0 300px; scroll-snap-align: start; background: var(--ghiaccio); border-radius: 16px; padding: 24px; }
     .review-head { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
-    .review-avatar {
-      width: 46px; height: 46px;
-      border-radius: 50%;
-      background: var(--blu);
-      color: var(--giallo);
-      font-family: 'Sora', sans-serif;
-      font-weight: 700;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1rem;
-      flex: 0 0 auto;
-    }
+    .review-avatar { width: 46px; height: 46px; border-radius: 50%; background: var(--blu); color: var(--giallo); font-family: 'Sora', sans-serif; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex: 0 0 auto; }
     .review-name { font-weight: 600; font-size: 0.98rem; }
     .review-stars { display: flex; gap: 2px; margin-top: 2px; }
     .review-stars svg { width: 15px; height: 15px; fill: var(--giallo); }
@@ -553,75 +387,31 @@
     /* ============================== FAQ ============================== */
     .faq { background: var(--ghiaccio); }
     .faq-list { max-width: 760px; margin: 0 auto; }
-    .faq-item {
-      background: var(--bianco);
-      border-radius: 12px;
-      margin-bottom: 12px;
-      overflow: hidden;
-      border: 1px solid #e8ebee;
-    }
-    .faq-question {
-      width: 100%;
-      text-align: left;
-      background: none;
-      border: none;
-      padding: 20px 22px;
-      font-family: 'Sora', sans-serif;
-      font-weight: 700;
-      font-size: 1.05rem;
-      color: var(--blu);
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-    }
-    .faq-question .faq-icon {
-      flex: 0 0 auto;
-      width: 24px; height: 24px;
-      transition: transform 0.25s ease;
-    }
+    .faq-item { background: var(--bianco); border-radius: 12px; margin-bottom: 12px; overflow: hidden; border: 1px solid #e8ebee; }
+    .faq-question { width: 100%; text-align: left; background: none; border: none; padding: 20px 22px; font-family: 'Sora', sans-serif; font-weight: 700; font-size: 1.05rem; color: var(--blu); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+    .faq-question .faq-icon { flex: 0 0 auto; width: 24px; height: 24px; transition: transform 0.25s ease; }
     .faq-question .faq-icon svg { width: 24px; height: 24px; fill: var(--giallo); }
     .faq-question[aria-expanded="true"] .faq-icon { transform: rotate(45deg); }
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease;
-    }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
     .faq-answer-inner { padding: 0 22px 20px; color: var(--grigio-testo); font-size: 0.97rem; }
 
     /* ============================== CTA FINALE ============================== */
     .final-cta { background: var(--blu); color: var(--bianco); text-align: center; }
     .final-cta h2 { font-size: clamp(1.7rem, 5vw, 2.6rem); margin-bottom: 14px; }
-    .final-cta p { color: var(--grigio-chiaro); max-width: 560px; margin: 0 auto 30px; font-size: 1.05rem; }
-    .final-cta-btns {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      max-width: 420px;
-      margin: 0 auto;
-    }
+    .final-cta p { color: var(--grigio-chiaro); max-width: 560px; margin: 0 auto 24px; font-size: 1.05rem; }
+    .final-cta .countdown-wrap { margin: 0 auto 28px; max-width: 360px; }
+    .final-cta-btns { display: flex; flex-direction: column; gap: 14px; max-width: 420px; margin: 0 auto; }
 
     /* ============================== FOOTER ============================== */
-    footer.site-footer {
-      background: var(--blu-scuro);
-      color: var(--grigio-chiaro);
-      padding: 40px 0;
-      font-size: 0.88rem;
-    }
-    .footer-logo {
-      font-family: 'Sora', sans-serif;
-      font-weight: 800;
-      font-size: 1.3rem;
-      color: var(--bianco);
-      margin-bottom: 14px;
-    }
+    footer.site-footer { background: var(--blu-scuro); color: var(--grigio-chiaro); padding: 40px 0; font-size: 0.88rem; }
+    .footer-logo { font-family: 'Sora', sans-serif; font-weight: 800; font-size: 1.3rem; color: var(--bianco); margin-bottom: 14px; }
     .footer-logo span { color: var(--giallo); }
     .footer-info { margin-bottom: 10px; line-height: 1.8; }
     .footer-links { margin-bottom: 10px; }
     .footer-links a { color: var(--giallo); text-decoration: none; }
     .footer-links a:hover { text-decoration: underline; }
     .footer-sep { color: var(--grigio-testo); margin: 0 8px; }
+    .footer-disclaimer { color: var(--grigio-testo); font-size: 0.8rem; margin-bottom: 10px; max-width: 720px; }
     .footer-copy { color: var(--grigio-testo); font-size: 0.82rem; }
 
     /* ============================== RESPONSIVE (desktop ≥768px) ============================== */
@@ -629,27 +419,40 @@
       .header-cta { display: none; }
       .header-phone-label { display: none; }
     }
-
     @media (min-width: 768px) {
       .section { padding: 88px 0; }
+      .hero { padding: 64px 0 84px; }
+      .hero-grid { grid-template-columns: 1.15fr 0.85fr; gap: 48px; }
       .trust-grid { grid-template-columns: repeat(4, 1fr); }
+      .include-grid { grid-template-columns: repeat(3, 1fr); }
+      .include-banner { flex-direction: row; align-items: center; justify-content: space-between; }
+      .include-banner .ib-text { flex: 1; }
+      .include-price { width: auto; border-top: none; border-left: 1px solid rgba(255,255,255,0.12); padding-top: 0; padding-left: 26px; text-align: right; align-items: flex-end; }
       .benefits-grid { grid-template-columns: repeat(3, 1fr); }
       .how-grid { grid-template-columns: repeat(4, 1fr); }
       .how-step { flex-direction: column; }
-      .option-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
       .final-cta-btns { flex-direction: row; justify-content: center; max-width: none; }
       .final-cta-btns .btn { flex: 0 1 auto; }
-      .hero { padding: 80px 0 96px; }
     }
   </style>
 </head>
 <body>
 
+  <!-- ============================== PROMO BAR ============================== -->
+  <div class="promo-bar">
+    🔥 <strong>Offerta a tempo</strong>
+    <span class="promo-hide-mobile">— Fotovoltaico + accumulo + climatizzatore a <strong>11.599€ +IVA</strong></span>
+    <span class="promo-sep">·</span>
+    Scade tra <strong id="barCd">—</strong>
+    <span class="promo-sep promo-hide-mobile">·</span>
+    <a href="#promo" class="promo-hide-mobile">Bloccala →</a>
+  </div>
+
   <!-- ============================== HEADER ============================== -->
   <header class="site-header">
     <div class="header-inner">
       <a href="#hero" class="logo" aria-label="SolPower home">
-        <img src="data:image/png;base64,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" alt="SolPower" height="38"
+        <img src="data:image/png;base64,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" alt="SolPower" height="26"
              onerror="this.style.display='none';this.nextElementSibling.style.display='inline';" />
         <span class="logo-fallback" style="display:none;">Sol<span>Power</span></span>
       </a>
@@ -658,7 +461,7 @@
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.2 2.2z"/></svg>
           <span class="header-phone-label">800 030 198 — <strong>Chiamata gratuita</strong></span>
         </a>
-        <a href="#preventivo" class="btn btn-primary header-cta">Calcola il tuo preventivo</a>
+        <a href="#promo" class="btn btn-primary header-cta">Blocca l'offerta</a>
       </div>
     </div>
   </header>
@@ -666,42 +469,76 @@
   <!-- ============================== HERO ============================== -->
   <section class="hero" id="hero">
     <div class="container hero-inner">
-      <h1>Quanto stai pagando di troppo<br />in bolletta ogni anno?</h1>
-      <p class="sub">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg>
-        Solo per residenti in Veneto, Friuli Venezia Giulia ed Emilia Romagna
-      </p>
+      <div class="hero-grid">
+        <div>
+          <span class="promo-eyebrow">🔥 Promo — solo per un mese</span>
+          <h1>Fotovoltaico con accumulo e climatizzatore. Chiavi in mano.</h1>
 
-      <div class="counter-box">
-        <div class="label">Con un impianto SolPower risparmieresti:</div>
-        <div class="counter-value">
-          <span>€</span><span id="counter">0</span><span class="suffix">/anno</span>
-        </div>
-      </div>
+          <div class="pkg">
+            <span class="pkg-chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7a5 5 0 100 10 5 5 0 000-10zm0-5l2 3h-4l2-3zm0 17l-2 3h4l-2-3zM2 12l3-2v4l-3-2zm17 0l3-2v4l-3-2z"/></svg>6,1 kW di pannelli</span>
+            <span class="pkg-chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4h-1V2h-4v2H9a2 2 0 00-2 2v14a2 2 0 002 2h6a2 2 0 002-2V6a2 2 0 00-2-2zm-2 13h-2v-2h2v2zm2-4H9V7h6v6z"/></svg>10 kWh di accumulo</span>
+            <span class="pkg-chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18a1 1 0 011 1v6a1 1 0 01-1 1H3a1 1 0 01-1-1V7a1 1 0 011-1zm3 3v2m4-2v2m4-2v2M7 18l-1.5 3M12 18l-1.5 3M17 18l-1.5 3" stroke="#F5A800" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>Clima 12.000 BTU</span>
+          </div>
 
-      <div class="hero-badges">
-        <div class="hero-badge">
-          <svg class="check-circle" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.2l-4-4 1.4-1.4 2.6 2.6 5.6-5.6L17.8 9l-7 7.2z"/></svg>
-          Consulenza gratuita
-        </div>
-        <div class="hero-badge">
-          <svg class="check-circle" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.2l-4-4 1.4-1.4 2.6 2.6 5.6-5.6L17.8 9l-7 7.2z"/></svg>
-          Installazione in 2 settimane
-        </div>
-        <div class="hero-badge">
-          <svg class="check-circle" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.2l-4-4 1.4-1.4 2.6 2.6 5.6-5.6L17.8 9l-7 7.2z"/></svg>
-          Zero anticipo — paghi dopo 3 mesi
-        </div>
-      </div>
+          <div class="region">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg>
+            Solo per residenti nelle province di Verona, Vicenza, Padova, Treviso, Pordenone, Udine e Gorizia
+          </div>
+          <div class="hero-saving">Con l'accumulo diventi indipendente e risparmi fino a <strong>€<span id="counter">0</span>/anno</strong> in bolletta.</div>
 
-      <a href="#preventivo" class="btn btn-primary btn-lg">
-        Calcola il tuo risparmio
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 12h12l-5-5 1.4-1.4L21 12l-7.6 6.4L12 17l5-5H5z"/></svg>
-      </a>
+          <div class="hero-badges">
+            <div class="hero-badge">
+              <svg class="check-circle" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.2l-4-4 1.4-1.4 2.6 2.6 5.6-5.6L17.8 9l-7 7.2z"/></svg>
+              Chiavi in mano
+            </div>
+            <div class="hero-badge">
+              <svg class="check-circle" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.2l-4-4 1.4-1.4 2.6 2.6 5.6-5.6L17.8 9l-7 7.2z"/></svg>
+              Zero anticipo — prima rata dopo 3 mesi
+            </div>
+            <div class="hero-badge">
+              <svg class="check-circle" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.2l-4-4 1.4-1.4 2.6 2.6 5.6-5.6L17.8 9l-7 7.2z"/></svg>
+              Installazione in 2 settimane
+            </div>
+          </div>
 
-      <div class="hero-social">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 11a4 4 0 10-4-4 4 4 0 004 4zm-8 0a4 4 0 10-4-4 4 4 0 004 4zm0 2c-2.7 0-8 1.3-8 4v3h10v-3c0-1 .4-1.9 1.1-2.6C10 13.2 8.9 13 8 13zm8 0c-.3 0-.7 0-1.1.1A4.9 4.9 0 0117 16v3h7v-3c0-2.7-5.3-4-8-4z"/></svg>
-        Oltre 500 famiglie in Veneto ci hanno già scelto
+          <div class="hero-social">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 11a4 4 0 10-4-4 4 4 0 004 4zm-8 0a4 4 0 10-4-4 4 4 0 004 4zm0 2c-2.7 0-8 1.3-8 4v3h10v-3c0-1 .4-1.9 1.1-2.6C10 13.2 8.9 13 8 13zm8 0c-.3 0-.7 0-1.1.1A4.9 4.9 0 0117 16v3h7v-3c0-2.7-5.3-4-8-4z"/></svg>
+            Oltre 500 famiglie in Veneto ci hanno già scelto
+          </div>
+        </div>
+
+        <!-- OFFER CARD -->
+        <div class="offer-card">
+          <div class="oc-label">Tutto incluso, prezzo bloccato</div>
+          <div class="offer-price">
+            <span class="amount">11.599€</span>
+            <span class="iva">+ IVA</span>
+          </div>
+          <div class="offer-real">
+            <span class="or-label">Il tuo costo reale con detrazione 50%*</span>
+            <span class="or-amount">6.380€</span>
+            <span class="or-sub">grazie al rimborso IRPEF di 6.379€</span>
+          </div>
+
+          <div class="countdown-wrap">
+            <div class="countdown-label">L'offerta scade tra</div>
+            <div class="countdown" aria-hidden="true">
+              <div class="cd-unit"><span class="cd-num" data-d>00</span><span class="cd-lbl">giorni</span></div>
+              <div class="cd-unit"><span class="cd-num" data-h>00</span><span class="cd-lbl">ore</span></div>
+              <div class="cd-unit"><span class="cd-num" data-m>00</span><span class="cd-lbl">min</span></div>
+              <div class="cd-unit"><span class="cd-num" data-s>00</span><span class="cd-lbl">sec</span></div>
+            </div>
+          </div>
+
+          <a href="#promo" class="btn btn-primary btn-lg btn-block oc-cta">
+            Blocca la mia offerta
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 12h12l-5-5 1.4-1.4L21 12l-7.6 6.4L12 17l5-5H5z"/></svg>
+          </a>
+          <div class="offer-turnkey">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1L3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5l-9-4z"/></svg>
+            Sopralluogo e preventivo gratuiti, nessun impegno
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -734,10 +571,63 @@
     </div>
   </section>
 
+  <!-- ============================== COSA INCLUDE ============================== -->
+  <section class="section includes">
+    <div class="container">
+      <h2 class="section-title">Cosa comprende l'offerta chiavi in mano</h2>
+      <p class="section-subtitle">Un unico pacchetto, un unico prezzo. Produci energia, la accumuli e climatizzi casa — senza pensare a nulla.</p>
+
+      <div class="include-grid">
+        <div class="include-card">
+          <span class="include-tag">INCLUSO</span>
+          <div class="include-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7a5 5 0 100 10 5 5 0 000-10zm0-5l2 3h-4l2-3zm0 17l-2 3h4l-2-3zM2 12l3-2v4l-3-2zm17 0l3-2v4l-3-2zM5 5l1 3-3-1 2-2zm14 0l2 2-3 1 1-3zM5 19l-2-2 3-1-1 3zm14 0l-1-3 3 1-2 2z"/></svg></div>
+          <h3>Impianto fotovoltaico</h3>
+          <div class="spec">6,1 kW di potenza</div>
+          <p>Pannelli ad alta efficienza che producono la tua energia e abbattono la bolletta fino al 75%.</p>
+        </div>
+        <div class="include-card">
+          <span class="include-tag">INCLUSO</span>
+          <div class="include-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4h-1V2h-4v2H9a2 2 0 00-2 2v14a2 2 0 002 2h6a2 2 0 002-2V6a2 2 0 00-2-2zm-2 13h-2v-2h2v2zm2-4H9V7h6v6z"/></svg></div>
+          <h3>Sistema di accumulo</h3>
+          <div class="spec">10 kWh di batteria</div>
+          <p>Immagazzini l'energia prodotta di giorno e la usi la sera. Massima indipendenza dalla rete.</p>
+        </div>
+        <div class="include-card">
+          <span class="include-tag">INCLUSO</span>
+          <div class="include-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18v6H3zm2 2v2m4-2v2m4-2v2M7 17l-1.5 3M12 17l-1.5 3M17 17l-1.5 3" stroke="#F5A800" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></div>
+          <h3>Climatizzatore</h3>
+          <div class="spec">Monosplit 12.000 BTU</div>
+          <p>Raffreschi d'estate e riscaldi d'inverno usando l'energia che produci gratis dal sole.</p>
+        </div>
+      </div>
+
+      <div class="include-banner">
+        <div class="ib-text">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 9L12 2 2 9l1 1 1-.7V21h5v-6h6v6h5V9.3l1 .7 1-1zM12 4.4l6 4.2V19h-1v-6H7v6H6V8.6l6-4.2z"/></svg>
+          <div>
+            <h3>Davvero chiavi in mano</h3>
+            <p>Sopralluogo, progetto, pratiche GSE e permessi, installazione certificata e garanzia ALL RISK 5 anni: pensiamo a tutto noi.</p>
+          </div>
+        </div>
+        <div class="include-price">
+          <div class="ip-amount">11.599€ <span>+ IVA</span></div>
+          <div class="ip-real"><span class="ipr-label">Costo reale con detrazione 50%*</span><span class="ipr-amount">6.380€</span></div>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top:32px;">
+        <a href="#promo" class="btn btn-primary btn-lg">
+          Blocca l'offerta prima che scada
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 12h12l-5-5 1.4-1.4L21 12l-7.6 6.4L12 17l5-5H5z"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- ============================== BENEFICI ============================== -->
   <section class="section benefits">
     <div class="container">
-      <h2 class="section-title">Perché installare il fotovoltaico adesso</h2>
+      <h2 class="section-title">Perché conviene dire sì adesso</h2>
       <div class="benefits-grid">
         <div class="benefit-card">
           <div class="benefit-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4.5 13.5H11l-1 8.5L19.5 10H13l0-8z"/></svg></div>
@@ -747,17 +637,17 @@
         <div class="benefit-card">
           <div class="benefit-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1a11 11 0 100 22 11 11 0 000-22zm1 16.9V19h-2v-1.1c-1.6-.3-3-1.3-3.1-3.1h2c.1.8.7 1.4 2.1 1.4 1.2 0 1.7-.5 1.7-1.2 0-.6-.3-1.1-2-1.5-2-.5-3.4-1.2-3.4-3 0-1.5 1.2-2.5 2.7-2.8V6h2v1.1c1.5.4 2.4 1.5 2.5 2.8h-2c-.1-.7-.5-1.2-1.5-1.2-1.1 0-1.6.5-1.6 1.1 0 .6.5 1 2 1.4 2 .5 3.4 1.3 3.4 3.1 0 1.6-1.2 2.5-2.8 2.8z"/></svg></div>
           <h3>Detrazione fiscale 50%</h3>
-          <p>Recuperi metà della spesa come rimborso IRPEF in 10 anni.</p>
+          <p>Recuperi metà della spesa come rimborso IRPEF in 10 anni: costo reale ≈ 6.380€.</p>
         </div>
         <div class="benefit-card">
-          <div class="benefit-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4.5 13.5H11l-1 8.5L19.5 10H13l0-8z"/></svg></div>
-          <h3>Vendi l'energia in eccesso</h3>
-          <p>Il GSE ti paga per ogni kWh che produci ma non consumi.</p>
+          <div class="benefit-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4h-1V2h-4v2H9a2 2 0 00-2 2v14a2 2 0 002 2h6a2 2 0 002-2V6a2 2 0 00-2-2zm-2 13h-2v-2h2v2zm2-4H9V7h6v6z"/></svg></div>
+          <h3>Indipendenza con l'accumulo</h3>
+          <p>Con 10 kWh di batteria usi la tua energia anche di sera e nei giorni nuvolosi.</p>
         </div>
         <div class="benefit-card">
-          <div class="benefit-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3L2 11h3v9h5v-6h4v6h5v-9h3L12 3z"/></svg></div>
-          <h3>Aumenta il valore della casa</h3>
-          <p>Un immobile con fotovoltaico vale mediamente il 4-6% in più.</p>
+          <div class="benefit-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18v6H3zm2 2v2m4-2v2m4-2v2M7 17l-1.5 3M12 17l-1.5 3M17 17l-1.5 3" stroke="#F5A800" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></div>
+          <h3>Climatizzatore incluso</h3>
+          <p>Riscaldi e raffreschi casa consumando l'energia che produci, non quella della rete.</p>
         </div>
         <div class="benefit-card">
           <div class="benefit-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg></div>
@@ -774,16 +664,16 @@
   </section>
 
   <!-- ============================== FORM MULTI-STEP ============================== -->
-  <section class="section form-section" id="preventivo">
+  <section class="section form-section" id="promo">
     <div class="container">
       <div class="form-card">
         <div class="form-head">
           <div class="badge-free">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.2l-4-4 1.4-1.4 2.6 2.6 5.6-5.6L17.8 9l-7 7.2z"/></svg>
-            Gratuito
+            Sopralluogo gratuito
           </div>
-          <h2>Calcola il costo del tuo impianto</h2>
-          <p>Preventivo personalizzato gratuito — risposta entro 24 ore</p>
+          <h2>Blocca la tua offerta promo</h2>
+          <p>Compila e ti confermiamo prezzo e disponibilità entro 24 ore. Nessun impegno.</p>
         </div>
 
         <div class="progress-wrap" id="progressWrap">
@@ -839,8 +729,8 @@
 
             <!-- STEP 2 -->
             <div class="step" data-step="2">
-              <h3 class="step-title">I tuoi consumi</h3>
-              <p class="step-hint">Più sono precisi, più preciso sarà il preventivo.</p>
+              <h3 class="step-title">La tua situazione</h3>
+              <p class="step-hint">Così tariamo l'offerta sulle tue esigenze reali.</p>
 
               <div class="field-group">
                 <span class="field-label">Spesa media mensile in bolletta</span>
@@ -853,22 +743,22 @@
               </div>
 
               <div class="field-group">
-                <span class="field-label">Potenza impianto desiderata</span>
-                <div class="option-grid" data-field="kw_interessato">
-                  <button type="button" class="option-btn">3 kW</button>
-                  <button type="button" class="option-btn">4,5 kW</button>
-                  <button type="button" class="option-btn">6 kW</button>
-                  <button type="button" class="option-btn">10+ kW</button>
+                <span class="field-label">Come riscaldi casa oggi</span>
+                <div class="option-grid" data-field="riscaldamento">
+                  <button type="button" class="option-btn">Gas / GPL</button>
+                  <button type="button" class="option-btn">Pompa di calore</button>
+                  <button type="button" class="option-btn">Elettrico</button>
+                  <button type="button" class="option-btn">Altro</button>
                 </div>
                 <span class="field-error">Seleziona un'opzione</span>
               </div>
 
               <div class="field-group">
-                <span class="field-label">Ti interessa l'accumulo (batteria)?</span>
-                <div class="option-grid cols-3" data-field="interesse_accumulo">
-                  <button type="button" class="option-btn">Sì</button>
-                  <button type="button" class="option-btn">No</button>
-                  <button type="button" class="option-btn">Non so ancora</button>
+                <span class="field-label">Quando vorresti installare</span>
+                <div class="option-grid cols-3" data-field="tempistica">
+                  <button type="button" class="option-btn">Il prima possibile</button>
+                  <button type="button" class="option-btn">Entro 3 mesi</button>
+                  <button type="button" class="option-btn">Sto valutando</button>
                 </div>
                 <span class="field-error">Seleziona un'opzione</span>
               </div>
@@ -885,7 +775,7 @@
             <!-- STEP 3 -->
             <div class="step" data-step="3">
               <h3 class="step-title">I tuoi dati</h3>
-              <p class="step-hint">Ultimo passo: dove ti inviamo il preventivo.</p>
+              <p class="step-hint">Ultimo passo: dove ti confermiamo l'offerta.</p>
 
               <div class="form-alert" id="formAlert">Ops, qualcosa è andato storto. Riprova o chiamaci al 800 030 198.</div>
 
@@ -912,40 +802,10 @@
                 <select id="provincia" name="provincia" class="select-input" required>
                   <option value="">Seleziona la tua provincia…</option>
                   <optgroup label="Veneto">
-                    <option>Verona</option><option>Vicenza</option><option>Padova</option>
-                    <option>Treviso</option><option>Venezia</option><option>Belluno</option><option>Rovigo</option>
+                    <option>Verona</option><option>Vicenza</option><option>Padova</option><option>Treviso</option>
                   </optgroup>
                   <optgroup label="Friuli Venezia Giulia">
-                    <option>Udine</option><option>Pordenone</option><option>Gorizia</option><option>Trieste</option>
-                  </optgroup>
-                  <optgroup label="Emilia Romagna">
-                    <option>Bologna</option><option>Modena</option><option>Reggio Emilia</option><option>Parma</option>
-                    <option>Piacenza</option><option>Ferrara</option><option>Ravenna</option>
-                    <option>Forlì-Cesena</option><option>Rimini</option>
-                  </optgroup>
-                  <optgroup label="Altre province">
-                    <option>Agrigento</option><option>Alessandria</option><option>Ancona</option><option>Aosta</option>
-                    <option>Arezzo</option><option>Ascoli Piceno</option><option>Asti</option><option>Avellino</option>
-                    <option>Bari</option><option>Barletta-Andria-Trani</option><option>Benevento</option><option>Bergamo</option>
-                    <option>Biella</option><option>Brescia</option><option>Brindisi</option><option>Cagliari</option>
-                    <option>Caltanissetta</option><option>Campobasso</option><option>Caserta</option><option>Catania</option>
-                    <option>Catanzaro</option><option>Chieti</option><option>Como</option><option>Cosenza</option>
-                    <option>Cremona</option><option>Crotone</option><option>Cuneo</option><option>Enna</option>
-                    <option>Fermo</option><option>Firenze</option><option>Foggia</option><option>Frosinone</option>
-                    <option>Genova</option><option>Grosseto</option><option>Imperia</option><option>Isernia</option>
-                    <option>L'Aquila</option><option>La Spezia</option><option>Latina</option><option>Lecce</option>
-                    <option>Lecco</option><option>Livorno</option><option>Lodi</option><option>Lucca</option>
-                    <option>Macerata</option><option>Mantova</option><option>Massa-Carrara</option><option>Matera</option>
-                    <option>Messina</option><option>Milano</option><option>Monza e Brianza</option><option>Napoli</option>
-                    <option>Novara</option><option>Nuoro</option><option>Oristano</option><option>Palermo</option>
-                    <option>Pavia</option><option>Perugia</option><option>Pesaro e Urbino</option><option>Pescara</option>
-                    <option>Pistoia</option><option>Potenza</option><option>Prato</option><option>Ragusa</option>
-                    <option>Reggio Calabria</option><option>Rieti</option><option>Roma</option><option>Salerno</option>
-                    <option>Sassari</option><option>Savona</option><option>Siena</option><option>Siracusa</option>
-                    <option>Sondrio</option><option>Sud Sardegna</option><option>Taranto</option><option>Teramo</option>
-                    <option>Terni</option><option>Torino</option><option>Trapani</option><option>Trento</option>
-                    <option>Varese</option><option>Vercelli</option><option>Verbano-Cusio-Ossola</option><option>Vibo Valentia</option>
-                    <option>Viterbo</option>
+                    <option>Pordenone</option><option>Udine</option><option>Gorizia</option>
                   </optgroup>
                 </select>
                 <span class="field-error">Seleziona la tua provincia</span>
@@ -960,7 +820,7 @@
               <div class="step-nav">
                 <button type="button" class="btn-back" data-prev="2">← Indietro</button>
                 <button type="submit" class="btn btn-primary" id="submitBtn">
-                  Richiedi il mio preventivo gratuito 🎯
+                  Blocca la mia offerta 🎯
                 </button>
               </div>
 
@@ -977,8 +837,8 @@
             <div class="ty-icon">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.2l-3.5-3.5L4 14.2l5 5 11-11-1.4-1.4z"/></svg>
             </div>
-            <h2>✅ Richiesta inviata con successo!</h2>
-            <p>Ti contatteremo entro 24 ore al numero che hai indicato. Nel frattempo, hai domande? Chiamaci gratis:</p>
+            <h2>✅ Offerta bloccata!</h2>
+            <p>Abbiamo ricevuto la tua richiesta. Ti contattiamo entro 24 ore per confermare prezzo e disponibilità della promo. Hai domande? Chiamaci gratis:</p>
             <a href="tel:800030198" class="btn btn-primary btn-lg">📞 800 030 198</a>
           </div>
 
@@ -1002,15 +862,15 @@
         <div class="how-step">
           <div class="how-num">2</div>
           <div>
-            <h3>Ti proponiamo la soluzione</h3>
-            <p>Ti presentiamo il piano personalizzato: risparmio atteso, costi, detrazioni.</p>
+            <h3>Confermiamo l'offerta</h3>
+            <p>Verifichiamo la fattibilità e ti confermiamo il pacchetto promo al prezzo bloccato.</p>
           </div>
         </div>
         <div class="how-step">
           <div class="how-num">3</div>
           <div>
             <h3>Installiamo in 2 settimane</h3>
-            <p>I nostri installatori certificati completano il lavoro in tempi rapidi.</p>
+            <p>I nostri installatori certificati completano pannelli, accumulo e climatizzatore.</p>
           </div>
         </div>
         <div class="how-step">
@@ -1027,20 +887,20 @@
   <!-- ============================== DETRAZIONE ============================== -->
   <section class="section detrazione">
     <div class="container">
-      <h2 class="section-title">Recuperi il 50% della spesa grazie alle detrazioni IRPEF</h2>
+      <h2 class="section-title">Con la detrazione 50% l'offerta ti costa davvero ≈ 6.380€</h2>
       <div class="detrazione-box">
-        <div style="font-weight:600;margin-bottom:14px;font-family:'Sora',sans-serif;">Esempio concreto</div>
-        <div class="detr-row"><span class="lbl">Costo impianto</span><span class="val">€ 7.750</span></div>
-        <div class="detr-row minus"><span class="lbl">Detrazione 50%</span><span class="val">− € 3.875</span></div>
+        <div style="font-weight:600;margin-bottom:14px;font-family:'Sora',sans-serif;">L'offerta in numeri</div>
+        <div class="detr-row"><span class="lbl">Prezzo chiavi in mano (IVA 10% incl.)</span><span class="val">€ 12.759</span></div>
+        <div class="detr-row minus"><span class="lbl">Detrazione IRPEF 50%</span><span class="val">− € 6.379</span></div>
         <hr class="detr-divider" />
-        <div class="detr-row total"><span class="lbl">Costo effettivo</span><span class="val">€ 3.875</span></div>
-        <div class="detr-saving">+ Risparmio bolletta stimato: € 1.400/anno</div>
-        <div class="detr-result">= Rientro dell'investimento in circa 3 anni*</div>
-        <div class="detr-note">*Il rientro varia in base ai consumi e alla configurazione dell'impianto.</div>
+        <div class="detr-row total"><span class="lbl">Costo effettivo</span><span class="val">€ 6.380</span></div>
+        <div class="detr-saving">+ Risparmio bolletta stimato: € 1.600/anno</div>
+        <div class="detr-result">= Rientro dell'investimento in circa 4 anni*</div>
+        <div class="detr-note">*Prezzo offerta 11.599€ + IVA agevolata 10% per il fotovoltaico residenziale. Il rientro varia in base ai consumi e alla configurazione dell'impianto.</div>
       </div>
       <div class="cta-wrap">
-        <a href="#preventivo" class="btn btn-primary btn-lg">
-          Scopri quanto puoi risparmiare tu
+        <a href="#promo" class="btn btn-primary btn-lg">
+          Voglio bloccare questa offerta
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 12h12l-5-5 1.4-1.4L21 12l-7.6 6.4L12 17l5-5H5z"/></svg>
         </a>
       </div>
@@ -1052,30 +912,37 @@
     <div class="container">
       <h2 class="section-title">Cosa dicono le famiglie che hanno già scelto SolPower</h2>
       <p class="reviews-hint">← Scorri per leggere tutte le recensioni →</p>
-      <div class="reviews-track" id="reviewsTrack">
-        <!-- card injected by JS -->
-      </div>
+      <div class="reviews-track" id="reviewsTrack"></div>
     </div>
   </section>
 
   <!-- ============================== FAQ ============================== -->
   <section class="section faq">
     <div class="container">
-      <h2 class="section-title">Domande frequenti</h2>
-      <div class="faq-list" id="faqList" style="margin-top:36px;">
-        <!-- items injected by JS -->
-      </div>
+      <h2 class="section-title">Domande frequenti sull'offerta</h2>
+      <div class="faq-list" id="faqList" style="margin-top:36px;"></div>
     </div>
   </section>
 
   <!-- ============================== CTA FINALE ============================== -->
   <section class="section final-cta">
     <div class="container">
-      <h2>Smetti di regalare soldi alle bollette.</h2>
-      <p>Calcola gratis quanto potresti risparmiare ogni anno con un impianto su misura.</p>
+      <h2>Blocca l'offerta prima che scada.</h2>
+      <p>Fotovoltaico 6,1 kW + accumulo 10 kWh + climatizzatore, chiavi in mano a 11.599€ + IVA. Solo per un mese.</p>
+
+      <div class="countdown-wrap">
+        <div class="countdown-label">L'offerta scade tra</div>
+        <div class="countdown" aria-hidden="true">
+          <div class="cd-unit"><span class="cd-num" data-d>00</span><span class="cd-lbl">giorni</span></div>
+          <div class="cd-unit"><span class="cd-num" data-h>00</span><span class="cd-lbl">ore</span></div>
+          <div class="cd-unit"><span class="cd-num" data-m>00</span><span class="cd-lbl">min</span></div>
+          <div class="cd-unit"><span class="cd-num" data-s>00</span><span class="cd-lbl">sec</span></div>
+        </div>
+      </div>
+
       <div class="final-cta-btns">
-        <a href="#preventivo" class="btn btn-primary btn-lg">
-          Calcola il mio risparmio
+        <a href="#promo" class="btn btn-primary btn-lg">
+          Blocca la mia offerta
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 12h12l-5-5 1.4-1.4L21 12l-7.6 6.4L12 17l5-5H5z"/></svg>
         </a>
         <a href="tel:800030198" class="btn btn-outline btn-lg">📞 Chiama gratis: 800 030 198</a>
@@ -1088,23 +955,53 @@
     <div class="container">
       <div class="footer-logo">Sol<span>Power</span></div>
       <div class="footer-info">Solpower SRL | P.IVA 05032770264 | Via Treviso 38/B — Silea (TV) 31057</div>
+      <div class="footer-disclaimer">
+        Offerta promozionale a tempo limitato, valida per residenti nelle province di Verona, Vicenza, Padova, Treviso, Pordenone, Udine e Gorizia, salvo verifica di fattibilità durante il sopralluogo. Prezzo di 11.599€ IVA esclusa (IVA agevolata 10% per il fotovoltaico residenziale). La detrazione fiscale del 50% è recuperata in 10 anni tramite IRPEF secondo la normativa vigente.
+      </div>
       <div class="footer-links">
         <a href="https://www.iubenda.com/privacy-policy/45824925" target="_blank" rel="noopener">Privacy Policy</a>
         <span class="footer-sep">|</span>
         <a href="https://www.iubenda.com/privacy-policy/45824925/cookie-policy" target="_blank" rel="noopener">Cookie Policy</a>
       </div>
-      <div class="footer-copy">© 2025 SolPower SRL — Tutti i diritti riservati</div>
+      <div class="footer-copy">© 2026 SolPower SRL — Tutti i diritti riservati</div>
     </div>
   </footer>
 
   <script>
     /* ============================== CONFIG ============================== */
     var WEBHOOK_URL = 'https://hook.make.com/PLACEHOLDER';
+    // Data di scadenza della promo (modificabile). Formato ISO, ora locale.
+    var PROMO_END = new Date('2026-08-08T23:59:59');
+    // Identificativo offerta inviato col lead (utile per Zapier/Google Sheet)
+    var OFFERTA_ID = 'Promo FV 6.1kW + accumulo 10kWh + clima 12000BTU - 11599 EUR +IVA';
 
-    /* ============================== CONTATORE HERO ============================== */
+    /* ============================== COUNTDOWN ============================== */
+    (function () {
+      function pad(n) { return String(n).padStart(2, '0'); }
+      function tick() {
+        var diff = PROMO_END.getTime() - Date.now();
+        if (diff < 0) diff = 0;
+        var d = Math.floor(diff / 86400000);
+        var h = Math.floor((diff % 86400000) / 3600000);
+        var m = Math.floor((diff % 3600000) / 60000);
+        var s = Math.floor((diff % 60000) / 1000);
+        document.querySelectorAll('.countdown').forEach(function (c) {
+          c.querySelector('[data-d]').textContent = pad(d);
+          c.querySelector('[data-h]').textContent = pad(h);
+          c.querySelector('[data-m]').textContent = pad(m);
+          c.querySelector('[data-s]').textContent = pad(s);
+        });
+        var bar = document.getElementById('barCd');
+        if (bar) bar.textContent = d + 'g ' + pad(h) + 'h ' + pad(m) + 'm';
+      }
+      tick();
+      setInterval(tick, 1000);
+    })();
+
+    /* ============================== CONTATORE RISPARMIO ============================== */
     (function () {
       var el = document.getElementById('counter');
-      var target = 1400, duration = 2000, start = null;
+      var target = 1600, duration = 2000, start = null;
       function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
       function step(ts) {
         if (!start) start = ts;
@@ -1112,7 +1009,6 @@
         el.textContent = Math.round(easeOut(p) * target).toLocaleString('it-IT');
         if (p < 1) requestAnimationFrame(step);
       }
-      // parte automaticamente 500ms dopo il caricamento (above the fold)
       window.addEventListener('load', function () {
         setTimeout(function () { requestAnimationFrame(step); }, 500);
       });
@@ -1150,12 +1046,13 @@
     /* ============================== FAQ ACCORDION ============================== */
     (function () {
       var faqs = [
-        { q: 'È davvero conveniente nel 2025?', a: 'Sì. Con i prezzi dell\'energia ancora alti e la detrazione del 50%, il rientro medio è tra 3 e 5 anni. L\'impianto dura 25-30 anni.' },
-        { q: 'Quanto tempo ci vuole per installarlo?', a: 'Dal contratto all\'attivazione: circa 2 settimane. Gestiamo noi tutte le pratiche burocratiche.' },
+        { q: 'Cosa comprende esattamente l\'offerta?', a: 'Un impianto fotovoltaico da 6,1 kW, un sistema di accumulo da 10 kWh e un climatizzatore monosplit da 12.000 BTU, tutto chiavi in mano: sopralluogo, progetto, pratiche, installazione e garanzia. Prezzo 11.599€ + IVA.' },
+        { q: 'Perché il prezzo è "IVA esclusa"?', a: 'Per il fotovoltaico residenziale si applica l\'IVA agevolata al 10%. Il prezzo dell\'offerta è 11.599€ + IVA: in fattura trovi l\'IVA al 10%, per un totale di circa 12.759€.' },
+        { q: 'Fino a quando è valida l\'offerta?', a: 'È una promozione a tempo: valida per un mese. Trovi il conto alla rovescia in cima alla pagina. Compilando il form blocchi il prezzo alle condizioni attuali.' },
         { q: 'Devo pagare qualcosa subito?', a: 'No. Zero anticipo. La prima rata parte 3 mesi dopo l\'installazione, quando hai già iniziato a risparmiare.' },
+        { q: 'Il climatizzatore è davvero incluso nel prezzo?', a: 'Sì. Il monosplit da 12.000 BTU è compreso nel pacchetto e viene installato insieme all\'impianto, senza costi aggiuntivi.' },
         { q: 'Funziona anche se il mio tetto non è orientato a sud?', a: 'Sì. I pannelli di ultima generazione producono bene anche con esposizioni est/ovest. Valutiamo la situazione specifica durante il sopralluogo gratuito.' },
-        { q: 'Cosa copre la garanzia?', a: 'Garanzia ALL RISK di 5 anni sull\'impianto completo, che copre qualsiasi tipo di danno. I pannelli hanno garanzia produttiva di 25 anni.' },
-        { q: 'Posso installarlo anche su un appartamento?', a: 'Dipende dalla situazione condominiale e dal tetto. Contattaci: valutiamo gratuitamente la fattibilità.' }
+        { q: 'Cosa copre la garanzia?', a: 'Garanzia ALL RISK di 5 anni sull\'impianto completo, che copre qualsiasi tipo di danno. I pannelli hanno garanzia produttiva di 25 anni.' }
       ];
       var plus = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5h2v6h6v2h-6v6h-2v-6H5v-2h6z"/></svg>';
       var list = document.getElementById('faqList');
@@ -1188,15 +1085,14 @@
       var thankyou = document.getElementById('thankyou');
       var formAlert = document.getElementById('formAlert');
       var submitBtn = document.getElementById('submitBtn');
-      var current = 1;
 
       var data = {
+        offerta: OFFERTA_ID,
         tipo_edificio: '', titolo_edificio: '', tipo_tetto: '',
-        spesa_bolletta: '', kw_interessato: '', interesse_accumulo: '',
+        spesa_bolletta: '', riscaldamento: '', tempistica: '',
         nome: '', email: '', telefono: '', provincia: '', timestamp: ''
       };
 
-      /* --- selezione bottoni opzione --- */
       form.querySelectorAll('.option-grid').forEach(function (grid) {
         grid.addEventListener('click', function (e) {
           var btn = e.target.closest('.option-btn');
@@ -1210,31 +1106,15 @@
       });
 
       function showStep(n) {
-        steps.forEach(function (s) {
-          s.classList.toggle('active', Number(s.getAttribute('data-step')) === n);
-        });
-        current = n;
+        steps.forEach(function (s) { s.classList.toggle('active', Number(s.getAttribute('data-step')) === n); });
         progressFill.style.width = (n / 3 * 100) + '%';
         progressText.textContent = 'Step ' + n + ' di 3';
-        // porta il form in vista, lasciando spazio per la tastiera mobile sullo step 3
-        document.getElementById('preventivo').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        document.getElementById('promo').scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
 
-      function validateStep1() {
+      function validateFields(fields) {
         var ok = true;
-        ['tipo_edificio', 'titolo_edificio', 'tipo_tetto'].forEach(function (f) {
-          var grid = form.querySelector('[data-field="' + f + '"]');
-          if (!data[f]) {
-            ok = false;
-            grid.classList.add('error');
-            grid.parentElement.querySelector('.field-error').classList.add('show');
-          }
-        });
-        return ok;
-      }
-      function validateStep2() {
-        var ok = true;
-        ['spesa_bolletta', 'kw_interessato', 'interesse_accumulo'].forEach(function (f) {
+        fields.forEach(function (f) {
           var grid = form.querySelector('[data-field="' + f + '"]');
           if (!data[f]) {
             ok = false;
@@ -1245,20 +1125,18 @@
         return ok;
       }
 
-      /* --- navigazione --- */
       form.addEventListener('click', function (e) {
         var next = e.target.closest('[data-next]');
         var prev = e.target.closest('[data-prev]');
         if (next) {
           var to = Number(next.getAttribute('data-next'));
-          if (to === 2 && !validateStep1()) return;
-          if (to === 3 && !validateStep2()) return;
+          if (to === 2 && !validateFields(['tipo_edificio', 'titolo_edificio', 'tipo_tetto'])) return;
+          if (to === 3 && !validateFields(['spesa_bolletta', 'riscaldamento', 'tempistica'])) return;
           showStep(to);
         }
         if (prev) showStep(Number(prev.getAttribute('data-prev')));
       });
 
-      /* --- validazione campi step 3 --- */
       function markError(input, on) {
         input.classList.toggle('error', on);
         var err = input.parentElement.querySelector('.field-error');
@@ -1273,22 +1151,16 @@
         var priv = document.getElementById('privacy');
 
         if (!nome.value.trim()) { markError(nome, true); ok = false; } else markError(nome, false);
-
         var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim());
         if (!emailOk) { markError(email, true); ok = false; } else markError(email, false);
-
         var telDigits = tel.value.replace(/\D/g, '');
         if (telDigits.length < 8) { markError(tel, true); ok = false; } else markError(tel, false);
-
         if (!prov.value) { markError(prov, true); ok = false; } else markError(prov, false);
-
         var privErr = document.getElementById('privacyError');
         if (!priv.checked) { privErr.classList.add('show'); ok = false; } else privErr.classList.remove('show');
-
         return ok;
       }
 
-      /* --- submit --- */
       form.addEventListener('submit', function (e) {
         e.preventDefault();
         formAlert.classList.remove('show');
@@ -1311,14 +1183,12 @@
         })
           .then(function (res) {
             if (!res.ok) throw new Error('HTTP ' + res.status);
-            // tracking GTM
             window.dataLayer = window.dataLayer || [];
             window.dataLayer.push({ event: 'lead_form_submit', step: 'completed' });
-            // mostra thank you
             steps.forEach(function (s) { s.classList.remove('active'); });
             progressWrap.style.display = 'none';
             thankyou.classList.add('active');
-            document.getElementById('preventivo').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            document.getElementById('promo').scrollIntoView({ behavior: 'smooth', block: 'start' });
           })
           .catch(function () {
             formAlert.classList.add('show');
